@@ -1,0 +1,77 @@
+* {
+    font-family: tahoma;
+}
+
+.top-bar .contact-info ul li {
+    font-size: 14px;
+    color: #FFF;
+    margin: 5px;
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;
+}
+
+.our-services .services-info h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+}
+
+.our-services .services-info p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    width: 60%;
+    margin: auto;
+}
+
+.our-services .service-item img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.our-services .service-item h3 {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (  min-width: 0px) and ( max-width: 575px ){
+    .slider img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media all and (  min-width: 576px) and ( max-width: 767px ){
+    .slider img {
+        width: 100%;
+        height: 300px;
+    }
+}

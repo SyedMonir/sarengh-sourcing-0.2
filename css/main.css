@@ -1,0 +1,776 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --brand-clr: #43cb83;
+}
+
+
+/* Container  */
+
+#mainNavbar, #mainContent, #globalLeader, #businessOverview, #overviews, .customize-container, footer {
+    width: 93%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:420px) {
+    #mainContent, #globalLeader, #businessOverview, #headingTechnology, footer {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:421px) and (max-width:820px) {
+    #mainContent, footer {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* HR  */
+.hr {
+    border-bottom: 2px solid #73623d;
+    width: 20%;
+    margin: 15px 0;
+}
+
+
+
+/* Navbar  */
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+#mainNavbar .nav-item {
+    height: 100%;
+}
+
+#mainNavbar .nav-item a {
+    color: #8c8c8c !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 25px 13px;
+    /* padding-bottom: 10px; */
+    transition: color 0.3s ease-out;
+    border-bottom: 3px solid transparent;
+}
+
+#mainNavbar .nav-item a:hover,
+#mainNavbar .nav-item .active {
+    border-bottom: 3px solid #8c8c8c;
+    color: #73623d !important;
+}
+
+
+
+/* Hero Video  */
+#heroVideo {
+    position: relative;
+    text-align: center;
+}
+
+#heroVideo #spin:after {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 28%;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 3.75rem;
+    font-weight: 100;
+    content: "";
+    animation: spin 14s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        content: "OVER 600 VENDORS";
+    }
+
+    50% {
+        content: "SPEED AND EFFICIENCY";
+    }
+
+    100% {
+        content: "TECHNOLOGY AND DESIGN";
+    }
+}
+
+@media screen and (max-width:820px) {
+    #heroVideo #spin:after {
+        top: 40%;
+        left: 15%;
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:420px) {
+    #heroVideo #spin:after {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* Main Content  */
+
+
+#mainContent .g-5, .gx-5 {
+    --bs-gutter-x: 4rem;
+}
+
+
+#mainContent .zoomImg {
+    width: 100%;
+    height: 214px;
+    overflow: hidden;
+    position: relative;
+}
+
+#mainContent .zoomImg img {
+    width: 100%;
+    /* height: 205px; */
+    position: absolute;
+    border-radius: 5px;
+    /*making the scaling smooth*/
+    transition: transform 0.5s ease;
+}
+
+
+#mainContent .zoomImg:hover img {
+    transform: scale(1.05);
+}
+
+#mainContent p {
+    font-size: 1rem;
+    color: #a8a8a8;
+    line-height: 1.65em;
+}
+
+
+
+/* Business  */
+
+/* Global Leader Section  */
+
+#globalLeader h1, #globalLeader h2, #businessOverview .title h1, #businessOverview .title h2 {
+    letter-spacing: 1px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+#globalLeader h1, #businessOverview .title h1 {
+    font-size: 54px;
+    color: #73623d;
+    letter-spacing: 1px;
+}
+
+#globalLeader h2 {
+    color: #757a7e;
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#globalLeader hr {
+    width: 60px;
+    border-top-width: 2px;
+    color: #504327;
+    border-top-style: solid;
+
+}
+
+#globalLeader strong {
+    color: #757a7e;
+}
+
+#globalLeader p {
+    font-size: 1rem;
+    color: #a8a8a8;
+}
+
+
+
+/*  Business Overview */
+
+#businessOverview .title {
+    text-align: right;
+}
+
+#businessOverview .title h2 {
+    color: #757a7e;
+    font-size: 28px;
+}
+
+#businessOverview hr {
+    margin-left: 6%;
+    margin-top: 30px;
+    border-color: #73623d;
+    color: #73623d;
+}
+
+#businessOverview hr:not([size]) {
+    height: 2px;
+    color: #73623d;
+}
+
+
+
+/* Overviews */
+.overview {
+    display: flex;
+}
+
+#overviews .icon {
+    background-color: #86754d;
+    color: #ffffff;
+    width: 74px;
+    height: 74px;
+    font-size: 27px;
+    line-height: 72px;
+    border: 1px solid #73623d;
+    border-radius: 500px;
+    text-align: center;
+    margin-right: 22px;
+}
+
+#overviews h3 {
+    color: #757a7e;
+    margin: 0 0 -3px 0;
+    padding: 2px 0 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+#overviews p {
+    font-size: 1rem;
+    margin: 0.85em 0;
+    color: #a8a8a8;
+}
+
+
+/* company-values */
+
+#company-values .company-value-text {
+    background: url('../media/img/business/image-back-business-2-1500x410.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 5.5rem;
+    width: 100%;
+}
+
+#company-values .company-value-text .company-first-h1, .company-second-h1 {
+    font-size: 40.47px;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+}
+
+#company-values .company-value-text .company-second-h1 {
+    font-size: 50.47px;
+}
+
+
+
+
+
+
+
+
+/* -------------TECHNOLOGY  */
+
+
+
+/* Technology Heading */
+
+#headingTechnology strong, #headingProduct strong {
+    color: #757a7e;
+}
+
+#headingTechnology p, #headingProduct p {
+    color: #a8a8a8;
+    font-size: 1rem;
+}
+
+#headingTechnology h1, #headingTechnology h2, #headingProduct h1, #headingProduct h2, #contact-title h2 {
+    color: #757a7e;
+    text-align: right;
+    font-size: 28px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+#headingTechnology h1, #headingProduct h2, #contact-title h1 {
+    font-size: 54px;
+    color: #73623d;
+    letter-spacing: 1px;
+}
+
+
+
+/* Technology Body  */
+
+#bodyOfTechnology h1, #bodyOfTechnology h2 {
+    color: #73623d;
+    font-size: 54px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+#bodyOfTechnology h2 {
+    color: #757a7e;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+#bodyOfTechnology p {
+    font-size: 1rem;
+    color: #a79f9f;
+}
+
+#bodyOfTechnology strong {
+    color: #757a7e;
+}
+
+
+
+/* Technology provided */
+
+#technologyProvided {
+    background-color: #86754d;
+    color: white;
+    padding: 50px 0;
+    line-height: 1.45em;
+    font-size: 1rem;
+}
+
+#technologyProvided ul li {
+    list-style-type: square;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+
+/* Product  */
+
+/*  Product Heading  */
+
+
+#headingProduct {
+    margin-top: 80px;
+}
+
+
+/* Product Carousel */
+#collapseNavbar {
+    margin: 50px auto 100px;
+    color: #555;
+    height: 400px;
+}
+
+@media screen and (max-width: 420px) {
+    #collapseNavbar {
+        height: 550px;
+    }
+
+    #collapseNavbar .tabs {
+        overflow: scroll;
+    }
+}
+
+#collapseNavbar h2 {
+    color: #73623d;
+}
+
+#collapseNavbar .tabs {
+    background-color: rgba(134, 117, 77, 0.51);
+    max-height: 100px;
+}
+
+#collapseNavbar .tabs li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#collapseNavbar .tabs a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 40px 10px;
+    font-size: .7rem;
+    max-height: 100px;
+    overflow-y: hidden;
+}
+
+#collapseNavbar .tabs a:hover,
+#collapseNavbar .tabs a.active {
+    color: #73623d;
+}
+
+#collapseNavbar .tabs a.active {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+
+
+/* Product Carousel  */
+
+#productCarousel {
+    background-color: #86754d;
+    color: white;
+    height: 183px;
+}
+
+#productCarousel h2, #peopleHeading h1, #peopleHeadingTwo h1, #csrHero h1, #pccHero h1 {
+    font-size: 54px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+
+
+#productCarousel p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+/* People Heading One and two*/
+#peopleHeading h1, #peopleHeadingTwo h1, #csrHero h1 {
+    color: #73623d;
+}
+
+
+#peopleHeading h2, #peopleHeadingTwo h2, #peopleBody h4, #peopleBodyTwo h2, #csrHero h2 {
+    color: #757a7e;
+    font-size: 28px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: center;
+}
+
+#peopleHeadingTwo {
+    margin-bottom: 100px;
+}
+
+
+/* People Body ONe & Two*/
+
+#peopleBody h4, #peopleBodyTwo h2, #csrHero h2 {
+    text-align: left;
+    padding: 0;
+}
+
+#peopleBody p {
+    color: #a8a8a8;
+}
+
+#peopleBody strong, #peopleBodyTwo h5 {
+    color: #73623d;
+    font-size: 1rem;
+}
+
+
+
+
+/* People Img  */
+#peopleImg {
+    margin-bottom: 65px;
+}
+
+
+
+
+
+/* style-zone */
+
+.style-zone {
+    margin: 70px auto;
+    /* margin: auto; */
+}
+
+.style-zone #password {
+    width: 100%;
+}
+
+.style-zone .enter-button {
+    padding: 2px 20px;
+    background-color: #73623d;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.style-zone p {
+    font-size: 1rem;
+    color: #a8a8a8;
+}
+
+.style-zone label {
+    font-weight: bold;
+    font-size: 0.92em;
+    color: #a8a8a8;
+}
+
+.style-zone input {
+    border-color: #73623d;
+    background-color: #d6d6d6;
+    color: #5e5e5e;
+    border: 1px solid #e1e1e1;
+    padding: 8px 6px;
+    outline: none;
+}
+
+
+
+
+
+/* CSR  */
+
+/* CSR Hero Section */
+#csrHero h5 {
+    color: #73623d;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 600;
+}
+
+#csrHero p {
+    color: #a8a8a8;
+}
+
+
+#compliance {
+    background: url('../media/img/csr/image-back-slide-csr-1500x410.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 5.5rem;
+    width: 100%;
+}
+
+#compliance p {
+    margin-bottom: 0;
+    font-size: .9rem;
+}
+
+#compliance h4 {
+    font-size: 18.886px;
+    color: rgb(255, 255, 255);
+    white-space: normal;
+    margin: 0px;
+    z-index: auto;
+    width: 404.7px;
+    height: 45.866px;
+    border-width: 0px;
+    border-radius: 0px;
+    letter-spacing: 0px;
+}
+
+
+
+
+
+
+
+
+/* PCC */
+
+/* PCC Hero Section  */
+#pccHero {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#pccHero h1 {
+    color: #005389;
+}
+
+#pccHero p {
+    line-height: 150%;
+    font-size: 1rem;
+    color: #a8a8a8;
+}
+
+#pccHero strong {
+    color: #757a7e;
+}
+
+
+
+/* PCC Service */
+
+#pccService {
+    /* width: 100%; */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../media/img/pcc/2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 8.5rem;
+    /* width: 100%; */
+}
+
+
+#pccService h2 {
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 0.9em;
+    font-weight: lighter;
+    text-transform: none;
+}
+
+#pccService p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/* Contact */
+#address p {
+    font-size: 1rem;
+    color: #a8a8a8;
+}
+
+#address strong {
+    color: #757a7e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer  */
+
+footer .navbar-brand:hover,
+footer a:hover,
+footer li:hover a {
+    color: var(--brand-clr);
+}
+
+@media screen and (max-width:420px) {
+    footer .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+footer, footer a {
+    color: #858585;
+}
+
+footer h5 {
+    color: #575757;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li {
+    list-style-type: none;
+    color: #828282;
+    padding: 4px 0px 5px 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+footer .weatherSection {
+    background-color: #e8e8e8;
+    width: 200px;
+}
+
+@media screen and (max-width:425px) {
+    footer .weatherSection {
+        width: 166px;
+    }
+}
+
+footer .weatherSection .summery {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .65;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2em;
+    font-size: 11px;
+}
+
+footer .weatherSection .weekdays .week {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8989893a;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+
+#copyright {
+    background-color: #f8f8f8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 21px;
+}
