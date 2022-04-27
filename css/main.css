@@ -454,7 +454,7 @@ header {
 #productCarousel {
     background-color: #86754d;
     color: white;
-    height: 183px;
+    /* height: 183px; */
 }
 
 #productCarousel h2, #peopleHeading h1, #peopleHeadingTwo h1, #csrHero h1, #pccHero h1 {
@@ -610,6 +610,18 @@ header {
     border-radius: 0px;
     letter-spacing: 0px;
 }
+
+@media screen and (max-width:420px) {
+    #compliance {
+        padding: 1rem;
+        text-align: justify;
+    }
+
+    #compliance h4 {
+        width: 100%;
+    }
+}
+
 
 
 
